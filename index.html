@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes App</title>
+    <style>
+        .container {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+        .hidden {
+            display: none;
+        }
+        .note {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="login_container" class="container">
+        <h2>Login</h2>
+        <input type="email" id="email" placeholder="Email" required><br><br>
+        <input type="password" id="password" placeholder="Password" required><br><br>
+        <button onclick="loginUser()">Login</button>
+    </div>
+    
+    <div id="home_container" class="container hidden">
+        <h2>Welcome, <span id="user_email"></span></h2>
+        <button onclick="logout()">Logout</button>
+        <h3>Add Note</h3>
+        <textarea id="note" placeholder="Your note here..." rows="5" cols="50"></textarea><br><br>
+        <button onclick="submitNote()">Submit</button>
+        <h3>Your Notes</h3>
+        <ul id="list"></ul>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
